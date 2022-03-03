@@ -1,31 +1,49 @@
-// // import models
-// const Product = require('./Product');
-// const Category = require('./Category');
-// const Tag = require('./Tag');
-// const ProductTag = require('./ProductTag');
+// An index file to gather the models and export them for use
 
-// // Products belongsTo Category
-// Product.belongsTo(Category, {
-//   foreignKey: 'category_id'
-// });
-// // Categories have many Products
-// Category.hasMany(Product, {
-//   foreignKey: 'category_id',
-//   onDelete: 'SET NULL'
-// })
-// // Products belongToMany Tags (through ProductTag)
-// Product.belongsToMany(Tag, {
-//   through: ProductTag,
-//   foreignKey: 'product_id'
-// })
-// // Tags belongToMany Products (through ProductTag)
-// Tag.belongsToMany(Product, {
-//   through: ProductTag,
-//   foreignKey: 'tag_id'
-// })
-// module.exports = {
-//   Product,
-//   Category,
-//   Tag,
-//   ProductTag,
-// };
+// User model
+const User = require('./User');
+// Post model
+const Post = require('./Post');
+// Comment model
+const Comment = require('./Comment');
+
+// Create associations between the models
+// User-Post relationship
+User.hasMany(Post, {
+    foreignKey: 'user_id'
+});
+//Post-User relationship
+Post.belongsTo(User, {
+    foreignKey: 'user_id'
+});
+
+// Comment-User relationship
+Comment.belongsTo(User, {
+    foreignKey: 'user_id',
+    onDelete: 'cascade',
+    hooks:true
+});
+
+// Comment-Post relationship
+Comment.belongsTo(Post, {
+    foreignKey: 'post_id',
+    onDelete: 'cascade',
+    hooks: true
+});
+
+// User-Comment relationsihp
+User.hasMany(Comment, {
+    foreignKey: 'user_id',
+    onDelete: 'cascade',
+    hooks:true
+});
+
+// Post-Comment relationship
+Post.hasMany(Comment, {
+    foreignKey: 'post_id',
+    onDelete: 'cascade',
+    hooks:true
+})
+
+// Export the modules
+module.exports = { User, Post, Comment };

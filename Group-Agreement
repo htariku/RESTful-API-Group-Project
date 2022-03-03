@@ -4,7 +4,7 @@ Boot Camp Project Group Agreements
 -   Our project is a sports blog where users can look up sports related articles and interact/engage with other users by commenting and/or liking each other’s posts
 2. What role(s) will everyone on the team hold?
 -   Helen: handlebar front end templates, post articles, env/dotenv
--   Sohrob: comment post routes, fetch articles of the day, login/logout
+-   Sohrob: comment post routes, fetch articles of the day, login/logout + handlebars font end 
 -   Brahm: seed database, sessions/cookies
 -   All: presentation slides
 3. How often will you have meetings? How long?

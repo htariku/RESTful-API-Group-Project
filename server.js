@@ -1,57 +1,44 @@
 const path = require('path');
-require('dotenv').config();
-
 const express = require('express');
+const session = require('express-session');
+const exphbs = require('express-handlebars');
+const helpers = require('./utils/helpers');
 
-const routes = require('./controllers/');
+const app = express();
+const PORT = process.env.PORT || 3001;
 
 const sequelize = require('./config/connection');
-
-const exphbs = require('express-handlebars')
-
-const session = require('express-session')
-
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
-const helpers = require('./utils/helpers');
+const sess = {
+  secret: 'Super secret secret',
+  cookie: {
+    // session expires in two hours
+    expires: 7200000
+    // // test session expires in 30 seconds
+    // expires: 30000
+  },
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize
+  })
+};
+
+app.use(session(sess));
 
 
 const hbs = exphbs.create({ helpers });
 
-// Initialize sessions
-const sess = {
-    secret: process.env.DB_SESSION_SECRET,
-    cookie: { maxAge: 7200000 },
-    resave: false,
-    saveUninitialized: true,
-    store: new SequelizeStore({
-      db: sequelize
-    })
-  };
-
-// Initialize the server
-const app = express();
-// Define the port for the server
-const PORT = process.env.PORT || 3001;
-
-// Give the server a path to the public directory for static files
-app.use(express.static(path.join(__dirname, 'public')));
-
-// Set handlebars as the template engine for the server
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
-// Have Express parse JSON and string data
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, 'public')));
 
-// Tell the app to use Express Session for the session handling
-app.use(session(sess));
-
-
-app.use(routes);
-
+app.use(require('./controllers/'));
 
 sequelize.sync({ force: false }).then(() => {
-    app.listen(PORT, () => console.log('Now listening'));
-  });
+  app.listen(PORT, () => console.log('Now listening'));
+});

@@ -1,8 +1,6 @@
-// Dependencies
-// Express.js connection
 const router = require('express').Router();
 // User, Post, Vote models
-const { User, Post, Comment } = require('../../models');
+const { User, Post, Comment } = require('../..models');
 // Express Session for the session data
 const session = require('express-session');
 // Authorization Helper

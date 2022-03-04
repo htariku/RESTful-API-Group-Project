@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS RESTful-API-Group-Project_db;
-CREATE DATABASE RESTful-API-Group-Project_db;
+DROP DATABASE IF EXISTS sports_blog_db;
+CREATE DATABASE sports_blog_db;

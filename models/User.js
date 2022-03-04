@@ -1,7 +1,3 @@
-// User Model
-
-// Dependencies
-// use Model and Datatype from sequelize
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 // use bcrypt for password hashing

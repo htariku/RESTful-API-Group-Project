@@ -1,2 +1,10 @@
-DROP DATABASE IF EXISTS RESTful-API-Group-Project_db;
-CREATE DATABASE RESTful-API-Group-Project_db;
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE users (
+user_id INTEGER AUTO_INCREMENT PRIMARY KEY,
+user_accountname VARCHAR(30) NOT NULL,
+user_firstname VARCHAR(30) NOT NULL,
+user_lastname VARCHAR(30) NOT NULL
+);
+
+

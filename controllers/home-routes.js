@@ -33,7 +33,7 @@ router.get('/', (req, res) => {
       res.render('homepage', {
         posts,
         loggedIn: req.session.loggedIn,
-        username: req.session.username
+        username: req.session.username,
       });
     })
     .catch(err => {

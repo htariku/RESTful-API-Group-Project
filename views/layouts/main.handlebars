@@ -10,15 +10,15 @@
 </head>
 <div class="wrapper">
     <header>
-        <a href="/"> Sports Blog</a>
+        <a href="/"> Sports Blog </a>
 <body>
   <ul>
        
-      <li><a href="dashboard.handlebars">Dashboard</a></li>
-      <li><a href="score.handlebars">ScoreBoard</a></li>
-      <li><a href="favor.handlebars">Favorites</a></li>
+      <li><a href="threads.handlebars"> Threads </a></li>
+      <li><a href="score.handlebars"> Scoreboard </a></li>
+      <li><a href="bookmarks.handlebars"> Bookmarks </a></li>
       
-      <li><a href="search.handlebars"><input type="'search" class="serach-bar" placeholder="Search"></a></li>
+      <li><a href="search.handlebars"><input type="'search" class="serach-bar" placeholder=" Search... "></a></li>
 
         {{#if loggedIn}}
         <a href="/dashboard"><span class="glyphicon glyphicon-user"></span>{{ username }}'s Dashboard</a>
@@ -29,7 +29,7 @@
       </ul>
 
        
-        <a href="/login">Login</a>
+        <a href="/login"> Login </a>
         {{/if}}
         </nav>
       </h1>

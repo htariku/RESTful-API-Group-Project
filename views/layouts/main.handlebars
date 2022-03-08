@@ -5,51 +5,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> Sports Blog</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link href="/stylesheets/style.css">
+
+  <link rel="stylesheet" href="/stylesheets/style.css" type = "text/css">
 </head>
-
-<body>
-  <div class="wrapper">
+<div class="wrapper">
     <header>
-<nav class="navbar has-shadow is-white" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-              <a class="navbar-item">
-              <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-              </a>
-            </div>
-          
-            <div id="navbarBasicExample" class="navbar-menu">
-              <div class="navbar-end">
-                <a href="/dashboard" class="navbar-item mx-6">
-                 Dashboard
-                </a>
-          
-                <a href="/bookmarks" class="navbar-item mx-6">
-                    Bookmarks
-                  </a>
-
-                <a href="/search" class="navbar-item mx-6">
-                    Search 
-                </a>
-              </div>
-            </div>
-          </nav>
-      <h1>
         <a href="/"> Sports Blog</a>
-      </h1>
-      <nav>
+<body>
+  <ul>
+       
+      <li><a href="dashboard.handlebars">Dashboard</a></li>
+      <li><a href="score.handlebars">ScoreBoard</a></li>
+      <li><a href="favor.handlebars">Favorites</a></li>
+      
+      <li><a href="search.handlebars"><input type="'search" class="serach-bar" placeholder="Search"></a></li>
+
         {{#if loggedIn}}
         <a href="/dashboard"><span class="glyphicon glyphicon-user"></span>{{ username }}'s Dashboard</a>
         <button id="logout" class="btn-no-style">logout</button>
         {{else}}
-        <a href="/login">login</a>
+
+        
+      </ul>
+
+       
+        <a href="/login">Login</a>
         {{/if}}
-      </nav>
+        </nav>
+      </h1>
+      
     </header>
     <main>
       {{{ body }}}

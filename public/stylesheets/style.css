@@ -104,6 +104,8 @@
       padding: 1.2rem;
       text-align: right;
       white-space: pre;
+      display:flex;
+      
   }
   
   .btn-no-style {
@@ -211,12 +213,15 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
+   
   
   }
   
   li {
     float: left;
     display:flex;
+    text-align: center;
+    list-style-position: inside;
 
   }
   
@@ -229,10 +234,11 @@
     display: flex;
     flex: 1;
     justify-content: space-evenly;
-
-    
+    text-align: left;
+    list-style-position: inside;
 
   }
+ 
   
   li a:hover {
     background-color: rgb(168, 199, 211);
@@ -247,6 +253,7 @@
     flex: auto;
 
   }
+
   img {
     width: 100%;
     height: 350px;

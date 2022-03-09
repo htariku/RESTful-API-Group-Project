@@ -157,6 +157,7 @@
   .edit-link {
     display: block;
     margin: -1.5% 0 2% 0;
+    color: #333;
   }
   
   .upvote-btn {
@@ -231,7 +232,7 @@
   }
   
   li a {
-    color: white;
+    color: #3486eb;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;

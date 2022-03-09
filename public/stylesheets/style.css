@@ -105,6 +105,8 @@
       text-align: right;
       white-space: pre;
       display:flex;
+      position: absolute;
+      
       
   }
   

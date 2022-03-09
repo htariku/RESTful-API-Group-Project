@@ -106,6 +106,7 @@
       white-space: pre;
       display:flex;
       position: absolute;
+      justify-content: space-evenly;
       
       
   }
@@ -215,6 +216,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
+    justify-content: space-evenly;
    
   
   }
@@ -224,6 +226,7 @@
     display:flex;
     text-align: center;
     list-style-position: inside;
+    justify-content: space-evenly;
 
   }
   

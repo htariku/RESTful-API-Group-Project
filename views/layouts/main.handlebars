@@ -16,21 +16,26 @@
         <a href="/"> BuzzerBeater </a>
 
 <body>
-  <ul>
+    <ul>
        
       <li><a href="threads.handlebars"> Threads </a></li>
+<<<<<<< HEAD
+      <li><a href="score.handlebars"> Scoreboard </a></li>
+      {{!-- <li><a href="bookmarks.handlebars"> Bookmarks </a></li>
+=======
       <li><a href="/scores"> Scoreboard </a></li>
       <li><a href="bookmarks.handlebars"> Bookmarks </a></li>
+>>>>>>> 18270cda74094ea9dfd25e67a3bc1c441a7e2fa9
       
-      <li><a href="search.handlebars"><input type="'search" class="serach-bar" placeholder=" Search... "></a></li>
-
+      <li><a href="search.handlebars"><input type="'search" class="serach-bar" placeholder=" Search... "></a></li> --}}
+      </ul>
         {{#if loggedIn}}
-        <a href="/dashboard"><span class="glyphicon glyphicon-user"></span>{{ username }}'s Dashboard</a>
+        <a href="/dashboard">{{ username }}'s Dashboard</a>
         <button id="logout" class="btn-no-style">logout</button>
         {{else}}
 
         
-      </ul>
+     
 
        
         <a href="/login"> Login </a>

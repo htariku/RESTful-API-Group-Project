@@ -6,10 +6,28 @@ const router = require('express').Router();
 const withAuth = require('../utils/auth');
 
 router.get('/',(req, res) => {
-    console.log('scores initiated');
-    res.render('scores')
+    getScore().then(value => {
+        var respArray=[]
+        value.forEach(val => {
+            if (val.league.name === "NBA") {
+                var scoreStream = [val.teams.home.name, val.scores.home.total, val.teams.away.name, val.scores.away.total]
+                respArray.push(scoreStream)
+            }
+
+        })
+        return respArray
+
+    }).then(respArray =>{
+        const post = respArray.map(value => {
+           return value.join(" ")+"\n";
+        })
+        res.render('scores',{post});
+    })
+
+
 
 })
+
 var options = {
   method: 'GET',
   url: 'https://api-basketball.p.rapidapi.com/games?',
@@ -64,20 +82,6 @@ var responArray= getScore().then(value => {
 // while(!isFulfilled){
 //     console.log(isFulfilled)
 // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -13,18 +13,20 @@ https://github.com/htariku/RESTful-API-Group-Project/settings/pages
 
  
    # Description
-   User Story: 
-   AS A basketball fan 
-   I WANT to easily be up to date with basketball topics and interact with other fans 
-   SO THAT I can be caught up on all things basketball even if i can not watch games live 
+User Story: 
 
-   Functionality :
-   WHEN I browse threads 
-   THEN I can view different threads on topics/events that are currently taking place 
-   WHEN  I want to know the current score on ongoing games 
-   THEN I can view the scoreboards for ongoing games 
-   WHEN I find a thread of my liking
-   THEN I can comment and interact with other Users  
+AS A basketball fan 
+I WANT to easily be up to date with basketball topics and interact with other fans 
+SO THAT I can be caught up on all things basketball even if I cannot watch games live 
+
+Functionality :
+
+WHEN  I want to know the current score on ongoing games 
+THEN I can view the scoreboards for ongoing games 
+WHEN I create a post based on the scores
+THEN I can comment and interact with other Users  
+
+
 
 <img width="757" alt="Screen Shot 2022-03-13 at 7 17 18 PM" src="https://user-images.githubusercontent.com/94089824/158083494-da912cc5-5d7b-47ea-ac4b-64d6466e5cb9.png">
 <img width="758" alt="Screen Shot 2022-03-13 at 7 17 29 PM" src="https://user-images.githubusercontent.com/94089824/158083521-ce815cce-ca02-452e-bedf-ecd14f40207f.png">

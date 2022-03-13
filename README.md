@@ -7,6 +7,9 @@ https://github.com/htariku/RESTful-API-Group-Project/settings/pages
 ## url link: 
  https://htariku.github.io/RESTful-API-Group-Project/
 
+ ## heroku link:
+ https://restful-api101.herokuapp.com/
+
 
  
    # Description
@@ -23,7 +26,8 @@ https://github.com/htariku/RESTful-API-Group-Project/settings/pages
    WHEN I find a thread of my liking
    THEN I can comment and interact with other Users  
 
-
+<img width="757" alt="Screen Shot 2022-03-13 at 7 17 18 PM" src="https://user-images.githubusercontent.com/94089824/158083494-da912cc5-5d7b-47ea-ac4b-64d6466e5cb9.png">
+<img width="758" alt="Screen Shot 2022-03-13 at 7 17 29 PM" src="https://user-images.githubusercontent.com/94089824/158083521-ce815cce-ca02-452e-bedf-ecd14f40207f.png">
 
 
 

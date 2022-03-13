@@ -1,8 +1,11 @@
-<div class="scores">
     <h2>Scores Page</h2>
 <div id="scores-template" type="text/x-handlebars-template">
 <ul class="scoreList">
-  <li>{{home.name}}:{{home.score}} <b></b>{{away.name}}:{{away.score}}</li>
+{{#each post}}
+    <ol>
+        <a  href="/dashboard?{{this}}">{{this}}</a>
+    </ol>
+    {{/each}}
 </ul>
 </div>
 </div>
